@@ -17,8 +17,7 @@
         <div data-role="header" data-theme="a" data-position="fixed">
             <h1>Create New Team</h1>
         </div>
-        <section>
-            <!-- I liked the look of the Sport Selection outside of the fieldset better.  Let me know if you think it should be placed inside -->
+        <div data-role="content">
             <div data-role="fieldcontain">
                 <nav>
                     <a href="#" id= "displayData">Display Data</a>
@@ -26,9 +25,9 @@
                     <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
                 </nav>
             </div>
-            <h1><label for="customize">Customize your team:</label></h1>
-            <form action="" method="post" id="teamForm">
-                
+        </div>
+        <div data-role="content">
+            <form action="" method="post" id="teamForm">                
                 <div data-role="fieldcontain" data-theme="c">
                     <label for="teamname">*Team Name:</label>
                     <input type="text" name="teamname" id="teamname" required aria-required="true" data-theme="c" />       
@@ -50,12 +49,13 @@
                 </div>
                 <div data-role="fieldcontain" class="ui-grid-a">
                     <div class="ui-block-a">
-                        <input type="submit" value="Add Team" data-theme="e" />
+                        <input type="submit" value="Add Team" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
                     </div>
                     <div class="ui-block-b">
-                        <input type="reset" value="Reset" data-theme="c" />
+                        <input type="reset" value="Reset" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a" />
                     </div>
                 </div>
+        </div>
     </div>
              
              
@@ -66,6 +66,8 @@
              
              
 <!--
+        <section>
+            <form>
                 <fieldset id="teamFieldset">
                     <legend>Team Info</legend>
                     <span>* fields are required.</span>
