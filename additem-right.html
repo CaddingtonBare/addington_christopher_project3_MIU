@@ -13,34 +13,50 @@
 	<link rel="stylesheet" href="styles-right.css" />
     </head>
     <body>
-        <header>
+    <div data-role="page" id="addteam" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
             <h1>Create New Team</h1>
-        </header>
+        </div>
         <section>
             <!-- I liked the look of the Sport Selection outside of the fieldset better.  Let me know if you think it should be placed inside -->
-            <nav>
-                <a href="#" id= "displayData">Display Data</a>
-                <a href="#" id= "clearData">Clear Stored Data</a>
-                <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
-            </nav>
+            <div data-role="fieldcontain">
+                <nav>
+                    <a href="#" id= "displayData">Display Data</a>
+                    <a href="#" id= "clearData">Clear Stored Data</a>
+                    <a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
+                </nav>
+            </div>
             <h1><label for="customize">Customize your team:</label></h1>
             <form action="" method="post" id="teamForm">
                 
-                <div data-role="fieldcontain">
+                <div data-role="fieldcontain" data-theme="c">
                     <label for="teamname">*Team Name:</label>
-                    <input type="text" name="teamname" id="teamname" required aria-required="true" />       
+                    <input type="text" name="teamname" id="teamname" required aria-required="true" data-theme="c" />       
                 </div>
                 <div data-role="fieldcontain">
                     <label for="notes">Notes:</label>
-                    <textarea></textarea>
+                    <textarea data-theme="c"></textarea>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="teamsize">Team Size (1-11):</label>
                     <input type="range" id="teamsize" value="5" min="1" max="11"  />
                 </div>
                 <div data-role="fieldcontain">
-                    
+                    <label for="playtime">Only available in the evening?</label>
+                    <select data-role="slider">
+                        <option value="on">Yes</option>
+                        <option value="off">No</option>
+                    </select>
                 </div>
+                <div data-role="fieldcontain" class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <input type="submit" value="Add Team" data-theme="e" />
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="reset" value="Reset" data-theme="c" />
+                    </div>
+                </div>
+    </div>
              
              
              

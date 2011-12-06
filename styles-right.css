@@ -110,11 +110,6 @@
 	  font-family: Helvetica /*{global-font-family}*/;
 	text-decoration: none;
 }
-body {
-    background-color: #339933;
-    background-image: -webkit-gradient(#2A692D, #336633 100%);
-    background-repeat: no-repeat;
-}
 img[id=ctaimg]{
     margin: 20px 0;
     width: 100%;
