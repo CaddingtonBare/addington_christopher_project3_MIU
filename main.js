@@ -3,6 +3,16 @@
 // Assignment: Project 1
 // MIU Term 1112
 
+$(document).ready(function(){
+    
+    var tmForm = $('#teamForm');
+    
+    tmForm.validate();
+
+
+});
+
+/*
 window.addEventListener("DOMContentLoaded", function () {
     function $(x) {
         var theElement = document.getElementById(x);
@@ -49,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function () {
         return availableValue;
     }
     */
-    
+/*    
     function toggleControls(n){
         switch(n){
             case "on":
@@ -264,3 +274,4 @@ window.addEventListener("DOMContentLoaded", function () {
     var save = $('submit');
     save.addEventListener("click", validate);
 });
+*/

@@ -27,10 +27,24 @@
             </div>
         </div>
         <div data-role="content">
-            <form action="" method="post" id="teamForm">                
+            <form action="" method="post" id="teamForm">
+                <div data-role="fieldcontain">
+                    <label for="selectsport">Sport:</label>
+                    <select name="selectsport" id="selectsport" data-native-menu="false" class="required">
+                        <option data-placeholder="true">Select your team's sport...</option>
+                        <optgroup label="Sports">
+                            <option value="basketball">Basketball</option>
+                            <option value="basketball">Football</option>
+                            <option value="basketball">Racquetball</option>
+                            <option value="basketball">Soccer</option>
+                            <option value="basketball">Tennis</option>
+                        </optgroup>    
+                    </select>
+                </div>
+                
                 <div data-role="fieldcontain" data-theme="c">
                     <label for="teamname">*Team Name:</label>
-                    <input type="text" name="teamname" id="teamname" required aria-required="true" data-theme="c" />       
+                    <input type="text" name="teamname" id="teamname" class="required number" data-theme="c" />       
                 </div>
 
                 <div data-role="fieldcontain">
@@ -123,5 +137,6 @@ Commented out until I decide if I want to replace the "Only available in the eve
         <script src="main.js" type="text/javascript"></script>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+        <script src="jquery.validate.min.js" type="text/javascript"></script>
     </body>
 </html>
