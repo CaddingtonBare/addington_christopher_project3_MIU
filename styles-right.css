@@ -4,6 +4,12 @@
  Term 1112, 01 December 2011
 */
 
+
+label.error{
+	display: block;
+	margin: 10px 0;
+}
+
 .ui-bar-a {
 	border: 1px solid #141714 /*{a-bar-border}*/;
 	background:  			#e9eaeb  /*{a-bar-background-color}*/;
