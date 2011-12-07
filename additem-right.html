@@ -32,14 +32,12 @@
                     <label for="teamname">*Team Name:</label>
                     <input type="text" name="teamname" id="teamname" required aria-required="true" data-theme="c" />       
                 </div>
-                <div data-role="fieldcontain">
-                    <label for="notes">Notes:</label>
-                    <textarea data-theme="c"></textarea>
-                </div>
+
                 <div data-role="fieldcontain">
                     <label for="teamsize">Team Size (1-11):</label>
-                    <input type="range" id="teamsize" value="5" min="1" max="11"  />
+                    <input type="range" id="teamsize" value="5" min="1" max="11" data-theme="c" />
                 </div>
+
                 <div data-role="fieldcontain">
                     <label for="playtime">Only available in the evening?</label>
                     <select data-role="slider">
@@ -47,6 +45,27 @@
                         <option value="off">No</option>
                     </select>
                 </div>
+
+<!--
+Commented out until I decide if I want to replace the "Only available in the evening?" slider.
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Available to play:</legend>
+                        <input type="checkbox" value="Morning" name="morning" id="playtime1" />
+                        <label for="playtime1">Morning</label>
+                        <input type="checkbox" value="Afternoon" name="morning" id="playtime2" />
+                        <label for="playtime2">Afternoon</label>
+                        <input type="checkbox" value="Evening" name="morning" id="playtime3" />
+                        <label for="playtime3">Evening</label>
+                    </fieldset>   
+                </div>
+-->
+                <div data-role="fieldcontain">
+                    <label for="notes">Notes:</label>
+                    <textarea data-theme="c"></textarea>
+                </div>
+
+
                 <div data-role="fieldcontain" class="ui-grid-a">
                     <div class="ui-block-a">
                         <input type="submit" value="Add Team" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
@@ -54,7 +73,9 @@
                     <div class="ui-block-b">
                         <input type="reset" value="Reset" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a" />
                     </div>
+
                 </div>
+            </form>
         </div>
     </div>
              
