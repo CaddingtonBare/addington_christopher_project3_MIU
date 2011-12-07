@@ -3,13 +3,14 @@
 // Assignment: Project 1
 // MIU Term 1112
 
+
 var parseTeamForm = function(data){
     console.log(data);
+    console.log(localStorage);
 };
 
 var pushJson = function(data){
     var convert = data.stringify;
-    json.push(data);  
 };
 
 $(document).ready(function(){
@@ -21,8 +22,6 @@ $(document).ready(function(){
         submitHandler: function(){
             var data = tmform.serializeArray();
             parseTeamForm(data);
-            pushJson(data);
-            console.log(json);
         }
     });
 });
