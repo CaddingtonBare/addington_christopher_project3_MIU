@@ -10,7 +10,7 @@
         <meta name="HandheldFriendly" content="True" />
         <title>My Pickup League - Create New Team</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<link rel="stylesheet" href="goodapp/css/styles-right.css" />
+	<link rel="stylesheet" href="css/styles-right.css" />
         <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
     </head>
     <body>
@@ -28,17 +28,17 @@
             </div>
         </div>
         <div data-role="content">
-            <form action="" method="post" id="teamForm">
+            <form action="" method="post" id="teamform">
                 <div data-role="fieldcontain">
                     <label for="selectsport">Sport:</label>
                     <select name="selectsport" id="selectsport" data-native-menu="false" class="required">
                         <option data-placeholder="true">Select your team's sport...</option>
                         <optgroup label="Sports">
                             <option value="basketball">Basketball</option>
-                            <option value="basketball">Football</option>
-                            <option value="basketball">Racquetball</option>
-                            <option value="basketball">Soccer</option>
-                            <option value="basketball">Tennis</option>
+                            <option value="football">Football</option>
+                            <option value="racquetball">Racquetball</option>
+                            <option value="soccer">Soccer</option>
+                            <option value="tennis">Tennis</option>
                         </optgroup>    
                     </select>
                 </div>
@@ -81,14 +81,15 @@ Commented out until I decide if I want to replace the "Only available in the eve
                 </div>
 
 
-                <div data-role="fieldcontain" class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <input type="submit" value="Add Team" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
-                    </div>
-                    <div class="ui-block-b">
-                        <input type="reset" value="Reset" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a" />
-                    </div>
-
+                <div data-role="fieldcontain">
+		    <div class="ui-grid-a">
+			<div class="ui-block-a">
+			    <input type="submit" value="Add Team" data-icon="check" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="e" />
+			</div>
+			<div class="ui-block-b">
+			    <input type="reset" value="Reset" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a" />
+			</div>
+		    </div>			
                 </div>
             </form>
         </div>
@@ -130,14 +131,13 @@ Commented out until I decide if I want to replace the "Only available in the eve
                         </li>
                     </ul>
                 </fieldset>
-                <input type="submit" value="Add Team" id="submit" /><br />   
             </form>
         </section>
 -->                
-        <script type="text/javascript" src="js/json.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/json.js"></script>	
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

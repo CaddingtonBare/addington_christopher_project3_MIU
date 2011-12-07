@@ -3,14 +3,30 @@
 // Assignment: Project 1
 // MIU Term 1112
 
+var parseTeamForm = function(data){
+    console.log(data);
+};
+
+var pushJson = function(data){
+    var convert = data.stringify;
+    json.push(data);  
+};
+
 $(document).ready(function(){
     
-    var tmForm = $('#teamForm');
+    var tmform = $('#teamform');
     
-    tmForm.validate();
-
-
+    tmform.validate({
+        invalidHandler: function(form, validator){},
+        submitHandler: function(){
+            var data = tmform.serializeArray();
+            parseTeamForm(data);
+            pushJson(data);
+            console.log(json);
+        }
+    });
 });
+
 
 /*
 window.addEventListener("DOMContentLoaded", function () {
@@ -139,7 +155,7 @@ window.addEventListener("DOMContentLoaded", function () {
         imageLi.appendChild(makeImg);
         
     }
-    
+*/ 
     
     //JSON OBJECT to autofill default localStorage data.
     function autoFillData(){
@@ -149,7 +165,8 @@ window.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem(id, JSON.stringify(json[n]));
         }
     }
-    
+    autoFillData();
+/*  
     //makeItemLinks function
     //Incorporates edit/delete links for local storage on display.
     function makeItemLinks(key, linksLi){
