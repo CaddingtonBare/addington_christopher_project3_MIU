@@ -10,7 +10,7 @@
         <meta name="HandheldFriendly" content="True" />
         <title>My Pickup League - Create New Team</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
+	<link rel="stylesheet" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
 	<link rel="stylesheet" href="css/styles-wrong.css" />
         <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
     </head>
@@ -58,8 +58,8 @@
                     <input type="range" id="teamsize" value="5" min="1" max="11" data-theme="c" />
                 </div>
 		<div data-role="fieldcontain">
-		    <label for="nextdate">Next available date (YYYY-MM-DD):</label>
-                    <input type="date" min="2011-10-27" max="2012-10-27" id="nextdate" name="nextdate" data-theme="c" />
+		    <label for="nextdate">Next available date:</label>
+		    <input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox", "disableManualInput": true}' class="required" data-theme="c" />
 		</div>
                 <div data-role="fieldcontain">
                     <label for="playtime">Only available in the evening?</label>
