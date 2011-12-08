@@ -5,7 +5,6 @@
 
 var parseTeamForm = function(data){
     console.log(data);
-    console.log(localStorage);
 };
 
 $(document).ready(function(){

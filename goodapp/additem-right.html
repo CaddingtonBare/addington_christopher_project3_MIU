@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- MIU Project 1 / Christopher Addington / Term: 1112, 27 November 2011 -->
+<!-- MIU Project 3 / Christopher Addington / Term: 1112, 07 December 2011 -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -10,6 +10,7 @@
         <meta name="HandheldFriendly" content="True" />
         <title>My Pickup League - Create New Team</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
 	<link rel="stylesheet" href="css/styles-right.css" />
         <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
     </head>
@@ -34,9 +35,9 @@
             <form action="" method="post" id="teamform">
                 <div data-role="fieldcontain">
 		    <h6>* indicates required field</h6>
-                    <label for="selectsport">Sport:</label>
+                    <label for="selectsport">*Sport:</label>
                     <select name="selectsport" id="selectsport" data-native-menu="false" class="required">
-                        <option data-placeholder="true">Select your team's sport...</option>
+                        <option data-placeholder="true" value>Select your team's sport...</option>
                         <optgroup label="Sports">
                             <option value="basketball">Basketball</option>
                             <option value="football">Football</option>
@@ -48,12 +49,16 @@
                 </div>
                 <div data-role="fieldcontain" data-theme="c">
                     <label for="teamname">*Team Name:</label>
-                    <input type="text" name="teamname" id="teamname" class="required number" data-theme="c" />       
+                    <input type="text" id="teamname" name="teamname" class="required" data-theme="c" />       
                 </div>
                 <div data-role="fieldcontain">
                     <label for="teamsize">Team Size (1-11):</label>
                     <input type="range" id="teamsize" value="5" min="1" max="11" data-theme="c" />
                 </div>
+		<div data-role="fieldcontain">
+		    <label for="nextdate">Next available date:</label>
+		    <input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox", "disableManualInput": true}' class="required" data-theme="c" />
+		</div>
                 <div data-role="fieldcontain">
                     <label for="playtime">Only available in the evening?</label>
                     <select data-role="slider">
@@ -94,15 +99,7 @@ Commented out until I decide if I want to replace the "Only available in the eve
                 </div>
             </form>
         </div>
-    </div>
-             
-             
-             
-             
-             
-             
-             
-             
+    </div>             
 <!--
         <section>
             <form>
@@ -135,9 +132,11 @@ Commented out until I decide if I want to replace the "Only available in the eve
             </form>
         </section>
 -->                
-        <script type="text/javascript" src="js/json.js"></script>	
+        <script type="text/javascript" src="js/json.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
         <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>

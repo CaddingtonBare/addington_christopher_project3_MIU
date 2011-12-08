@@ -1,16 +1,12 @@
 // Name: Christopher Addington
-// Date: 27 November, 2011
-// Assignment: Project 1
+// Date: 07 December, 2011
+// Assignment: Project 3
 // MIU Term 1112
 
 
 var parseTeamForm = function(data){
     console.log(data);
     console.log(localStorage);
-};
-
-var pushJson = function(data){
-    var convert = data.stringify;
 };
 
 $(document).ready(function(){
@@ -24,6 +20,15 @@ $(document).ready(function(){
             parseTeamForm(data);
         }
     });
+});
+
+$("#myform").validate({
+  rules: {
+    field: {
+      required: true,
+      date: true
+    }
+  }
 });
 
 
@@ -154,7 +159,6 @@ window.addEventListener("DOMContentLoaded", function () {
         imageLi.appendChild(makeImg);
         
     }
-*/ 
     
     //JSON OBJECT to autofill default localStorage data.
     function autoFillData(){
@@ -165,7 +169,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
     autoFillData();
-/*  
+    
     //makeItemLinks function
     //Incorporates edit/delete links for local storage on display.
     function makeItemLinks(key, linksLi){
