@@ -3,13 +3,22 @@
 // Assignment: Project 1
 // MIU Term 1112
 
+var parseTeamForm = function(data){
+    console.log(data);
+    console.log(localStorage);
+};
+
 $(document).ready(function(){
     
-    var tmForm = $('#teamForm');
+    var tmform = $('#teamform');
     
-    tmForm.validate();
-
-
+    tmform.validate({
+        invalidHandler: function(form, validator){},
+        submitHandler: function(){
+            var data = tmform.serializeArray();
+            parseTeamForm(data);
+        }
+    });
 });
 
 /*
