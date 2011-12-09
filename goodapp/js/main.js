@@ -32,7 +32,7 @@ $(document).ready(function(){
             var data = tmform.serializeArray();
             parseTeamForm(data);
             saveLocal();
-    
+            alert("Team saved!");
         }
     });
 });
