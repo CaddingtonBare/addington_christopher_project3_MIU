@@ -15,7 +15,7 @@
         <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
     </head>
     <body>
-    <div data-role="page" id="addteam" data-theme="a">
+    <div data-role="page" id="addteam" data-add-back-btn="true" data-theme="a">
         <div data-role="header" data-theme="a" data-position="fixed">
             <h1>Create New Team</h1>
         </div>
@@ -57,11 +57,11 @@
                 </div>
 		<div data-role="fieldcontain">
 		    <label for="nextdate">Next available date:</label>
-		    <input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox", "disableManualInput": true}' class="required" data-theme="c" />
+		    <input name="nextdate" id="nextdate" type="date" data-role="datebox" data-options='{"mode": "calbox", "disableManualInput": true}' class="required" data-theme="c" />
 		</div>
                 <div data-role="fieldcontain">
                     <label for="playtime">Only available in the evening?</label>
-                    <select data-role="slider">
+                    <select data-role="slider" id="availabletime">
                         <option value="on">Yes</option>
                         <option value="off">No</option>
                     </select>
@@ -132,7 +132,6 @@ Commented out until I decide if I want to replace the "Only available in the eve
             </form>
         </section>
 -->                
-        <script type="text/javascript" src="js/json.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>

@@ -16,6 +16,27 @@ $(document).ready(function(){
         submitHandler: function(){
             var data = tmform.serializeArray();
             parseTeamForm(data);
+            
+        function saveLocal(key) {
+            if(!key){
+                var id                  = Math.floor(Math.random()*42000000); 
+            }else{
+                id = key;
+            }
+            var item                = {};
+            item.sports         = ["Sport: ", $('sports').value, ];
+            item.sports         = ["Sport: ", $('sports').value];
+            item.teamname       = ["Name: ", $('teamname').value];
+            item.teamsize       = ["Team Size: ", $('teamsize').value];
+            item.availabletime  = ["Only evening games: ", availableValue];
+            item.nextdate       = ["Next available date: ", $('nextdate').value];
+            item.notes          = ["Notes: ", $('notes').value];
+        //Save data into Local Storage: Use Stringify to convert our object to a string
+        localStorage.setItem(id, JSON.stringify(item));
+        alert("Team saved!");
+        }
+            
+            
         }
     });
 });

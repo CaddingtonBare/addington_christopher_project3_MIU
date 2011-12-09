@@ -3,11 +3,24 @@
 // Assignment: Project 3
 // MIU Term 1112
 
-
 var parseTeamForm = function(data){
     console.log(data);
-    console.log(localStorage);
 };
+
+function saveLocal(key) {
+    if(!key){
+        var id                  = Math.floor(Math.random()*42000000); 
+    }else{
+        id = key;
+    }
+    var item                    = {};
+    item.sports                 = ["Sport: ", $('sports').value];
+    item.teamname               = ["Name: ", $('teamname').value];
+    item.teamsize               = ["Team Size: ", $('teamsize').value];
+    item.nextdate               = ["Next available date: ", $('nextdate').value];
+//Save data into Local Storage: Use Stringify to convert our object to a string
+    localStorage.setItem(id, JSON.stringify(item));
+}
 
 $(document).ready(function(){
     
@@ -18,19 +31,11 @@ $(document).ready(function(){
         submitHandler: function(){
             var data = tmform.serializeArray();
             parseTeamForm(data);
+            saveLocal();
+    
         }
     });
 });
-
-$("#myform").validate({
-  rules: {
-    field: {
-      required: true,
-      date: true
-    }
-  }
-});
-
 
 /*
 window.addEventListener("DOMContentLoaded", function () {
